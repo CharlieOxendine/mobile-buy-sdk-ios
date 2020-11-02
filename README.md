@@ -1065,7 +1065,7 @@ let task = client.mutateGraphWith(mutation) { result, error in
         // handle request error
     }
 
-    guard let userError = result?.checkoutCreate?.userErrors else {
+    if let userError = result?.checkoutCreate?.userErrors {
         // handle any user error
         return
     }
